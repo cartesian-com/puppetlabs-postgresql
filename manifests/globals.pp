@@ -154,8 +154,6 @@ class postgresql::globals (
   if($manage_package_repo) {
     class { 'postgresql::repo':
       version => $globals_version,
-      proxy   => $repo_proxy,
-      baseurl => $repo_baseurl,
     }
   }
 }
